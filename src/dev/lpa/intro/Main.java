@@ -23,14 +23,14 @@ public class Main {
         arrayInitializationExample = new int[3];
         System.out.println("All primitive types starts with default values");
         for (int i = 0; i < 0; i++) {
-            System.out.print(arrayInitializationExample[i]+ " ");
+            System.out.print(arrayInitializationExample[i] + " ");
         }
         //Adding values
         for (int i = 0; i < arrayInitializationExample.length; i++) {
-            arrayInitializationExample[i] = i+1;
+            arrayInitializationExample[i] = i + 1;
         }
         System.out.println("-".repeat(30));
-        for (int element: arrayInitializationExample){
+        for (int element : arrayInitializationExample) {
             System.out.print(element + " ");
             //actual element (not index)
         }
@@ -40,8 +40,10 @@ public class Main {
         String elementsOnArray = Arrays.toString(arrayInitializationExample);
         System.out.println(elementsOnArray);
 
+        System.out.println("-".repeat(30));
+        System.out.println("Checking instance of operator:");
         Object objectVariable = arrayInitializationExample;
-        if(objectVariable instanceof  int[]){
+        if (objectVariable instanceof int[]) {
             System.out.println("This is an integer array");
         }
 
@@ -50,6 +52,11 @@ public class Main {
         objectArray[0] = "Hello";
         objectArray[1] = new StringBuilder("World");
         objectArray[2] = new int[12];
-
+        System.out.println("-".repeat(30));
+        System.out.print("This is a Enhanced LOOP. ");
+        System.out.println("The results get printed just as a less generic array");
+        for (Object element : objectArray) {
+            System.out.println(" Element: " + element);
+        }
     }
 }
