@@ -11,9 +11,12 @@ public class ReverseSorting {
         System.out.println(dashes);
         System.out.println("Unsorted Array:");
         System.out.println(Arrays.toString(randomUnsortedArray));
-        System.out.println("Descending Order array:");
         Arrays.sort(randomUnsortedArray);
+        System.out.println("Sorted Array:");
+        System.out.println(Arrays.toString(randomUnsortedArray));
+
         reverseArray(randomUnsortedArray);
+        System.out.println("Descending Order array:");
         System.out.println(Arrays.toString(randomUnsortedArray));
     }
 
@@ -22,10 +25,8 @@ public class ReverseSorting {
         int j = array.length-1;
         while(i<=j){
             int temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
-            i++;
-            j--;
+            array[i++] = array[j];
+            array[j--] = temp;
         }
     }
 
