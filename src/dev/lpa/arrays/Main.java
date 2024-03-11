@@ -47,10 +47,23 @@ public class Main {
         System.out.println(Arrays.toString(largerArray));
         System.out.println(dashes);
 
+        String[] names = {"Bob", "Alice", "Donald", "Clark"};
+        Arrays.sort(names);
+        System.out.println(Arrays.toString(names));
+        if(Arrays.binarySearch(names, "Clark")>=0){
+            System.out.println("Clark is on the list!");
+        }
+        System.out.println(dashes);
 
+        System.out.println("Comparing arrays:");
+        int[] A = {1,2,3,4};
+        int[] B = {1,2,3,4};
+        if(Arrays.equals(A,B)){
+            System.out.println("Arrays are equal");
+        }else System.out.println("Arrays are not equal");
     }
 
-    private static int[] getRandomArray(int len){
+    public static int[] getRandomArray(int len){
         Random random = new Random();
         int[] newInt = new int[len];
         for (int i= 0; i<newInt.length; i++){
