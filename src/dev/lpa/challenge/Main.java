@@ -6,8 +6,12 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         int[] intArray = readIntegers();
+        System.out.println("Array before reversing it:");
         System.out.println(Arrays.toString(intArray));
-        System.out.println("Minimum number in the array: " + findMin(intArray));
+        System.out.println("Array after reversing it:");
+        reverse(intArray);
+        System.out.println(Arrays.toString(intArray));
+
     }
 
     public static int findMin(int... array) {
@@ -32,6 +36,16 @@ public class Main {
             //Remove empty spaces and trailing from the string
         }
         return array;
+    }
+
+
+    private static void reverse(int [] array){
+        int s =0, e = array.length-1;
+        while(s<e){
+            int temp = array[s];
+            array[s++] = array[e];
+            array[e--] = temp;
+        }
     }
 
 
