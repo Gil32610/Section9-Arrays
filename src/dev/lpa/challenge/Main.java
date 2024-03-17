@@ -9,22 +9,26 @@ public class Main {
         System.out.println(Arrays.toString(intArray));
         System.out.println("Minimum number in the array: " + findMin(intArray));
     }
-    public static int findMin(int ... array){
+
+    public static int findMin(int... array) {
         int min = Integer.MAX_VALUE;
 
         for (int i = 0; i < array.length; i++) {
-            if(min>array[i]) min = array[i];
+            if (min > array[i]) min = array[i];
         }
 
         return min;
     }
 
-    public static int[] readIntegers(){
-        int [] array = new int[10];
+    public static int[] readIntegers() {
         Scanner s = new Scanner(System.in);
-        for (int i = 0; i < array.length; i++) {
-            System.out.println("Enter next number:");
-            array[i] = Integer.parseInt(s.nextLine());
+        int[] array = null;
+        System.out.println("Input the array elements separated by comma:");
+        String input = s.nextLine();
+        String[] split = input.split(",");
+        array = new int[split.length];
+        for (int i = 0; i < split.length; i++) {
+            array[i] = Integer.parseInt(split[i]);
         }
         return array;
     }
