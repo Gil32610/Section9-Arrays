@@ -56,6 +56,7 @@ public class Main {
         System.out.println(dashes);
 
         System.out.println("Comparing arrays:");
+        //Anonymous arrays!
         int[] A = {1,2,3,4};
         int[] B = {1,2,3,4};
         if(Arrays.equals(A,B)){
