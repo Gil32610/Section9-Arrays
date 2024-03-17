@@ -38,14 +38,24 @@ public class Main {
         return array;
     }
 
-
-    private static void reverse(int [] array){
-        int s =0, e = array.length-1;
-        while(s<e){
+    //Mutating method
+    private static void reverse(int[] array) {
+        int s = 0, e = array.length - 1;
+        while (s < e) {
             int temp = array[s];
             array[s++] = array[e];
             array[e--] = temp;
         }
+    }
+
+    //Non mutating method
+    private static int[] reverseCopy(int[] array) {
+        int[] newArray = new int[array.length];
+        int maxIndex = array.length;
+        for (int el : array) {
+            newArray[maxIndex--] = el;
+        }
+        return newArray;
     }
 
 
