@@ -28,7 +28,8 @@ public class Main {
         String[] split = input.split(",");
         array = new int[split.length];
         for (int i = 0; i < split.length; i++) {
-            array[i] = Integer.parseInt(split[i]);
+            array[i] = Integer.parseInt(split[i].trim());
+            //Remove empty spaces and trailing from the string
         }
         return array;
     }
